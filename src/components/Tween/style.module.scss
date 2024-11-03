@@ -1,0 +1,18 @@
+.ScrollWrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.ScrollContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
