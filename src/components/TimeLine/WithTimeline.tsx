@@ -1,5 +1,5 @@
 import { FC, useRef } from "react";
-import { gsap, Power2 } from "gsap";
+import { gsap, Power3 } from "gsap";
 import { useGSAP } from "@gsap/react";
 import CssRulePlugin from 'gsap/CSSRulePlugin'
 
@@ -16,18 +16,18 @@ const WithTimeline: FC = () => {
     let t1 = gsap.timeline()
 
     useGSAP(() => {
-        t1.to(i1.current, { duration: 0.2, css: { display: "block" } })
-            .to(i1.current, { css: { display: "none" } })
-            .to(i2.current, { duration: 0.2, css: { display: "block" } })
-            .to(i2.current, { css: { display: "none" } })
-            .to(i3.current, { duration: 0.2, css: { display: "block" } })
-            .to(i3.current, { css: { display: "none" } });
+        t1.to(i1.current, { duration: 0.2, display: "block" })
+            .to(i1.current, { display: "none" })
+            .to(i2.current, { duration: 0.2, display: "block" })
+            .to(i2.current, { display: "none" })
+            .to(i3.current, { duration: 0.2, display: "block" })
+            .to(i3.current, { display: "none" });
 
         t1.add("start")
-            .to(ImageReveal, { duration: 1.5, width: "0%", ease: Power2.easeInOut }, "start")
-            .to(logo.current, { duration: 1.5, scale: 1.2, ease: Power2.easeInOut }, "start")
-            .to(banner.current, { duration: 1.5, scale: 1.1, ease: Power2.easeInOut }, "start")
-            .to(slogan.current, { duration: 0.5, ease: Power2.easeInOut, css: { transform: "translateY(0%)" }});
+            .to(ImageReveal, { duration: 1.5, width: "0%", ease: Power3.easeInOut }, "start")
+            .to(logo.current, { duration: 1.5, scale: 1.2, ease: Power3.easeInOut }, "start")
+            .to(banner.current, { duration: 1.5, scale: 1.1, ease: Power3.easeInOut }, "start")
+            .to(slogan.current, { duration: 0.5, ease: Power3.easeInOut, css: { transform: "translateY(0%)" } });
 
     })
 

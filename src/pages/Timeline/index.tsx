@@ -8,6 +8,7 @@ const TimeLineDemo = () => {
             <div style={{ position: 'absolute', top: '0', left: '0', zIndex: 10 }}>
                 <Button variant="outlined" onClick={()=>navigate('/timeline/with-timeline')}> With Timeline</Button>
                 <Button variant="outlined" onClick={()=>navigate('/timeline/without-timeline')}> Without Timeline</Button>
+                <Button variant="outlined" onClick={()=>navigate('/tween/tween-to')}>Tween</Button>
             </div>
             <Outlet />
         </div>

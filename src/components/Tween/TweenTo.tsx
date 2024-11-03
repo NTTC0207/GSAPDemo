@@ -4,7 +4,7 @@ import gsap from "gsap";
 
 const TweenTo: FC = memo(() => {
     const boxRef = useRef<any>();
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState({ x: 0, y: 0 })
 
     useGSAP(() => {
         gsap.to(boxRef.current, {
