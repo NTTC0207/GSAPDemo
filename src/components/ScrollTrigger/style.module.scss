@@ -1,5 +1,35 @@
 .ScrollWrapper {
+width: 100%;
+display: flex;
+flex-direction: column;
 
+   .ScrollSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
 
-    .SrollContainer {}
+   .ScrollSection:nth-child(1){
+    background-color: rgb(83, 81, 81);
+   }
+   .ScrollSection:nth-child(2){
+    background-color: rgb(63, 65, 63);
+
+    .ScrollHide {
+        overflow: hidden;
+        // first 
+    //     div{
+    //         opacity: 0; 
+    //         font-size: 2rem;
+    //         transform: translateY(20px); 
+    //    }
+    div{
+        
+    }
+    }
+   }
+   .ScrollSection:nth-child(3){
+    background-color: rgb(35, 34, 34);
+   }
 }

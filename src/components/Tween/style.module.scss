@@ -1,3 +1,20 @@
+
+.squareContainer{
+    width: 100%;
+    height: 100%;
+    border-left: 1px dashed white;
+    border-top: 1px dashed white;
+    position: absolute;
+    .square {
+            width: 200px;
+            height: 200px;
+            border-radius: 10%;
+            background: linear-gradient(320deg, #00c6ff, #0072ff);
+            position: absolute;
+    }
+}
+
+
 .ScrollWrapper {
     display: flex;
     height: 100vh;

@@ -1,9 +1,8 @@
-import { FC } from "react";
+import { Outlet } from "react-router-dom";
 import { Navigation } from "../../components";
 import { mainList } from "../../components/Nav/constant";
-import { Outlet } from "react-router-dom";
 
-const ScrollTriggerDemo: FC = () => {
+const StaggerDemo = () => {
   return (
     <Navigation menus={mainList}>
       <Outlet />
@@ -11,4 +10,4 @@ const ScrollTriggerDemo: FC = () => {
   );
 };
 
-export default ScrollTriggerDemo;
+export default StaggerDemo;

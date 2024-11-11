@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { FC, useRef, useState ,memo } from "react"
 import gsap from "gsap";
+import style from './style.module.scss'
 
 const TweenFrom: FC = memo(() => {
     const boxRef = useRef<any>();
@@ -24,8 +25,8 @@ const TweenFrom: FC = memo(() => {
 
     return (
         <>
-            <div ref={boxRef} style={{ width: '100%', height: '100%', borderLeft: '1px dashed white', borderTop: '1px dashed white', position: 'absolute' }}>
-                <div style={{ width: '200px', height: '200px', background: 'red', position: 'absolute' }}>
+ <div ref={boxRef} className={style.squareContainer}>
+ <div className={style.square}>
                     Tween From {`(${position.x}px,${position.y}px)`}
                 </div>
             </div>
