@@ -1,0 +1,13 @@
+export declare const content: string;
+export declare const contentWrapper: string;
+export declare const hero: string;
+export declare const imageContainer: string;
+export declare const img: string;
+export declare const landing: string;
+export declare const scrollHide: string;
+export declare const scrollSection: string;
+export declare const scrollWrapper: string;
+export declare const section: string;
+export declare const text: string;
+export declare const textWrapper: string;
+export declare const wrapper: string;

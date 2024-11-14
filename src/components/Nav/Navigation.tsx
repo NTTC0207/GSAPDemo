@@ -35,7 +35,7 @@ const Navigation: FC<NavigationProps> = ({ children, menus }) => {
   };
 
   return (
-    <div className={style.TweenWrapper}>
+    <div className={style.tweenWrapper}>
       <div className={style.btnGroup}>
         {menus.map((menu, index) => (
           <div key={index}>

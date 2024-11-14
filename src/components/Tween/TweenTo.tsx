@@ -2,7 +2,6 @@ import { FC, useRef, useState, memo } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import style from './style.module.scss'
-import PageTransition from "../pageTransition";
 
 const TweenTo: FC = memo(() => {
     const boxRef = useRef<any>();
@@ -14,7 +13,6 @@ const TweenTo: FC = memo(() => {
             y: 200,
             duration: 3,
             // repeat: -1,
-            // yoyo:true,
             onUpdate: () => {
                 const x = gsap.getProperty(boxRef.current, "x");
                 const y = gsap.getProperty(boxRef.current, "y");
@@ -22,7 +20,7 @@ const TweenTo: FC = memo(() => {
                 setPosition({ x: Math.floor(x), y: Math.floor(y) });
             }
         });
-    }, []);
+    });
 
     return (
         <>

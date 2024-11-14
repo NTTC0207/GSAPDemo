@@ -24,7 +24,8 @@
     "react-router-dom": "^6.27.0",
     "recharts": "^2.13.3",
     "sass": "^1.80.6",
-    "split-type": "^0.3.4"
+    "split-type": "^0.3.4",
+    "typed-scss-modules": "^8.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",

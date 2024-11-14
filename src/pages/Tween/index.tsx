@@ -10,7 +10,7 @@ const TweenDemo: FC = () => {
     const location = useLocation();
     return (
         <Navigation menus={mainList}>
-            <div className={style.tween} >
+            <div className={style.tween} style={{ overflow: 'hidden' }} >
                 {location.pathname === '/tween' && (
                     <div className={style.title}> Tween</div>
                 )}
