@@ -1,7 +1,5 @@
-import { useEffect, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { TweenDemo, TimeLineDemo, ScrollTriggerDemo, StaggerDemo } from "./pages";
-import LocomotiveScroll from "locomotive-scroll";
 import {
   Basic,
   TweenFrom,
@@ -9,27 +7,29 @@ import {
   TweenTo,
   WithTimeline,
   WithoutTimeline,
-  TextAnimation
+  TextAnimation,
+  Example
 } from "./components";
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "./components/pageTransition";
+import PageTransitionDemo from "./pages/pageTransition";
 
 const App = () => {
-  const locomotiveScrollRef = useRef<any>(null);
-  useEffect(() => {
-    locomotiveScrollRef.current = new LocomotiveScroll();
-  }, []);
+  const location = useLocation()
 
   return (
-    <Router>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         {/* Tween */}
         <Route path="/tween" element={<TweenDemo />}>
           <Route path="tween-to" element={<TweenTo />} />
           <Route path="tween-from" element={<TweenFrom />} />
           <Route path="tween-fromTo" element={<TweenFromTo />} />
         </Route>
+
         {/* Stagger */}
         <Route path="/stagger" element={<StaggerDemo />}>
-          <Route path="text" element={<TextAnimation/>} />
+          <Route path="text" element={<TextAnimation />} />
         </Route>
         {/* TimeLine */}
         <Route path="/timeline" element={<TimeLineDemo />}>
@@ -39,9 +39,16 @@ const App = () => {
         {/* ScrollTrigger */}
         <Route path="/scrolltrigger" element={<ScrollTriggerDemo />}>
           <Route path="/scrolltrigger/Basic" element={<Basic />} />
+          <Route path="/scrolltrigger/example" element={<Example />} />
         </Route>
+
+        <Route path="/pageTransition" element={<PageTransition><PageTransitionDemo /></PageTransition>}>
+          <Route path="test" element={<TweenDemo />} />
+          <Route path="test2" element={<StaggerDemo />} />
+        </Route>
+
       </Routes>
-    </Router>
+    </AnimatePresence>
   );
 };
 

@@ -14,6 +14,7 @@ const timelineItems = [
 const scrollTriggerItems = [
   { route: "/scrolltrigger", name: "Scroll Trigger" },
   { route: "/scrolltrigger/basic", name: "Basic" },
+  { route: "/scrolltrigger/example", name: "Scroll trigger Example" },
 ];
 
 const StaggerItems = [
@@ -21,9 +22,16 @@ const StaggerItems = [
   { route: "/stagger/text", name: "Text" },
 ];
 
+const PageTransitionItems = [
+  { route: "/pageTransition", name: "PageTransition" },
+  { route: "/pageTransition/test2", name: "Page 1" },
+  { route: "/pageTransition/test", name: "Page 2" },
+];
+
 export const mainList = [
   { name: "Tween", items: tweenItems },
   { name: "Stagger", items: StaggerItems },
   { name: "Timeline", items: timelineItems },
   { name: "ScrollTrigger", items: scrollTriggerItems },
+  { name: "Page Transition", items: PageTransitionItems },
 ];

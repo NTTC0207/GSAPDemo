@@ -2,6 +2,7 @@ import { FC, useRef, useState, memo } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import style from './style.module.scss'
+import PageTransition from "../pageTransition";
 
 const TweenTo: FC = memo(() => {
     const boxRef = useRef<any>();

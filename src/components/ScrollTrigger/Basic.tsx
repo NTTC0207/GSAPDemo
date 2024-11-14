@@ -23,14 +23,15 @@ const Basic: FC = () => {
         stagger: 0.05,
         // opacity: 1,
         scrollTrigger: {
-          trigger: containerRef.current,
-          markers: true,
-          start: "center center",
-          end: "+=500",
+          markers: true,  trigger: containerRef.current,
+          start:'center center',
+          end: '60% 30%',
+          // start: "center center",
+          // end: "+=500",
           // onEnter  onLeave onEnterBack onLeaveback
-          // toggleActions:"play none none none",
-           scrub: 3,
-           pin: true
+           // toggleActions:"play pause resume reverse",
+          scrub: 1,
+        //   pin: true
         },
       }
     );

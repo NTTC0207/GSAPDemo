@@ -4,24 +4,22 @@ import { mainList } from "../../components/Nav/constant";
 import { Outlet, useLocation } from "react-router-dom";
 import style from '../Tween/style.module.scss'
 
-const ScrollTriggerDemo: FC = () => {
+const PageTransitionDemo: FC = () => {
   const location = useLocation();
   return (
     <Navigation menus={mainList}>
-      {
-        location.pathname === '/scrolltrigger' && (
-          <div className={style.tween}>
-
+      <div className={style.tween}>
+        {
+          location.pathname === '/pageTransition' && (
             <div className={style.title}>
-              Scroll Trigger
+              Page Transition
             </div>
-          </div>
-        )
-      }
-
-      <Outlet />
+          )
+        }
+        <Outlet />
+      </div>
     </Navigation>
   );
 };
 
-export default ScrollTriggerDemo;
+export default PageTransitionDemo

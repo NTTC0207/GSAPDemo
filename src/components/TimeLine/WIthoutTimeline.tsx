@@ -12,9 +12,10 @@ const WithoutTimeline: FC = () => {
     let logo = useRef(null)
     let ImageReveal = CssRulePlugin.getRule(".banner-wrapper:after")
     let slogan = useRef(null)
-    let t1 = gsap.timeline()
+
 
     useEffect(() => {
+        const t1 = gsap.timeline()
         t1.to(i1.current, { duration: 0.2, display: "block" })
             .to(i1.current, { display: "none" })
             .to(i2.current, { duration: 0.2, display: "block" })
@@ -28,11 +29,14 @@ const WithoutTimeline: FC = () => {
             .to(banner.current, { duration: 1.5, scale: 1.1, ease: Power3.easeInOut }, "start")
             .to(slogan.current, { duration: 0.5, ease: Power3.easeInOut, css: { transform: "translateY(0%)" } });
 
-    },[])
+        return () => {
+            t1.revert();
+        }
+    }, []);
 
     return (
         <section style={{ width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <h1 className="Logo" ref={logo}>Lorem</h1>
+            <h1 className="Logo" ref={logo}>Moutain</h1>
             <div style={{ position: 'absolute', width: "100%", height: "100vh" }}>
                 <div style={{ display: 'flex', justifyContent: "center", alignItems: 'center', height: "100vh" }}>
 
@@ -42,7 +46,7 @@ const WithoutTimeline: FC = () => {
             </div>
 
             <div className="banner-wrapper">
-                <img className="Banner-img" ref={banner} src="/banner.webp" alt="banner" />
+                <img className="Banner-img" ref={banner} src="/moutain.webp" alt="banner" />
             </div>
 
 
