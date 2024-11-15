@@ -1,23 +1,23 @@
-.ScrollWrapper {
+.scrollWrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    .ScrollSection {
+    .scrollSection {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .ScrollSection:nth-child(1) {
+    .scrollSection:nth-child(1) {
         background-color: rgb(83, 81, 81);
     }
 
-    .ScrollSection:nth-child(2) {
+    .scrollSection:nth-child(2) {
         background-color: rgb(63, 65, 63);
 
-        .ScrollHide {
+        .scrollHide {
             overflow: hidden;
 
             // first 
@@ -30,7 +30,7 @@
         }
     }
 
-    .ScrollSection:nth-child(3) {
+    .scrollSection:nth-child(3) {
         background-color: rgb(35, 34, 34);
     }
 }

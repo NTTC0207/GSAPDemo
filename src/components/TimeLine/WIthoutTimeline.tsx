@@ -15,7 +15,7 @@ const WithoutTimeline: FC = () => {
 
 
     useEffect(() => {
-        const t1 = gsap.timeline()
+         const t1 = gsap.timeline()
         t1.to(i1.current, { duration: 0.2, display: "block" })
             .to(i1.current, { display: "none" })
             .to(i2.current, { duration: 0.2, display: "block" })

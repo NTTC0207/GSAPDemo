@@ -10,9 +10,9 @@ const TweenFrom: FC = memo(() => {
 
     useGSAP(() => {
         gsap.from(boxRef.current, {
-            x: 300,
-            y: 500,
-            duration: 5,
+             x: 300,
+             y: 500,
+             duration: 1000,
             // repeat: -1,
             // yoyo:true,
             onUpdate: () => {

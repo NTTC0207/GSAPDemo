@@ -10,9 +10,11 @@ const TweenTo: FC = memo(() => {
     useGSAP(() => {
         gsap.to(boxRef.current, {
             x: 300,
-            y: 200,
-            duration: 3,
-            // repeat: -1,
+            y: 100,
+            opacity:0.4,
+             duration: 3,
+             repeat: -1,
+             // yoyo:true,
             onUpdate: () => {
                 const x = gsap.getProperty(boxRef.current, "x");
                 const y = gsap.getProperty(boxRef.current, "y");
@@ -29,6 +31,7 @@ const TweenTo: FC = memo(() => {
                     Tween To  {`(${position.x}px,${position.y}px)`}
                 </div>
             </div >
+            
 
         </>
     );

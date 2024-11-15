@@ -13,7 +13,6 @@ const TweenFromTo: FC = memo(() => {
             {
                 x: 200,
                 y: 200,
-                duration: 3
             },
             {
                 x: 400,
@@ -29,7 +28,7 @@ const TweenFromTo: FC = memo(() => {
                 }
             }
         );
-    }, []);
+    });
 
     return (
         <>

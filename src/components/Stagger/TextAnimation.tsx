@@ -7,18 +7,20 @@ import style from "./style.module.scss";
 const TextAnimation: FC = () => {
   const textRef = useRef<HTMLHeadingElement>(null);
   useGSAP(() => {
-    const splitText = new SplitType(textRef.current as HTMLHeadingElement);
+     const splitText = new SplitType(textRef.current as HTMLHeadingElement);
     const chars = splitText.chars;
+    console.log(chars)
 
     gsap.fromTo(
-      chars,
+       chars,
+      //textRef.current,
       {
         y: 50,
       },
       {
         duration: 0.5,
         y: 0,
-        stagger: 0.05,
+         stagger: 0.05,
       }
     );
   });

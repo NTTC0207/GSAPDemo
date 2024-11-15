@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import style from "./style.module.scss";
 import SplitType from "split-type";
 
-gsap.registerPlugin(ScrollTrigger, gsap);
+gsap.registerPlugin(ScrollTrigger);
 const Basic: FC = () => {
   const containerRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -21,27 +21,15 @@ const Basic: FC = () => {
         y: 0,
         duration: 0.5,
         stagger: 0.05,
-        // opacity: 1,
-        scrollTrigger: {
-          markers: true,  trigger: containerRef.current,
-          start:'center center',
-          end: '60% 30%',
-          // start: "center center",
-          // end: "+=500",
-          // onEnter  onLeave onEnterBack onLeaveback
-           // toggleActions:"play pause resume reverse",
-          scrub: 1,
-        //   pin: true
-        },
       }
     );
   });
 
   return (
-    <div className={style.ScrollWrapper}>
-      <section className={style.ScrollSection}></section>
-      <section className={style.ScrollSection} ref={containerRef}>
-        <div className={style.ScrollHide}>
+    <div className={style.scrollWrapper}>
+      <section className={style.scrollSection}></section>
+      <section className={style.scrollSection} ref={containerRef}>
+        <div className={style.scrollHide}>
           <div ref={textRef} style={{ fontSize: "2rem" }}>
             Lorem ipsum dolor sit amet consectetur.
           </div>

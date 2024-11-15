@@ -11,15 +11,15 @@ const ScrollTrigger: FC = () => {
     })
 
     return (
-        <div className={style.ScrollWrapper}>
+        <div className={style.scrollWrapper}>
 
-            <div className={style.ScrollContainer}>
-
-            </div>
-
-            <div className={style.ScrollContainer}>
+            {/* <div className={style.scrollContainer}>
 
             </div>
+
+            <div className={style.scrollContainer}>
+
+            </div> */}
 
         </div>
     )

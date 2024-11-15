@@ -29,7 +29,7 @@ const Example: FC = () => {
                 end: "+=250%",
                 pin: true,
                 scrub: true,
-                // markers: true
+                 markers: true
             }
         })
             .to(imgRef.current, {
