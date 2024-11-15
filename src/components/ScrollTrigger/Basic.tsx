@@ -35,7 +35,7 @@ const Basic: FC = () => {
           </div>
         </div>
       </section>
-      <section className={style.ScrollSection}></section>
+      <section className={style.scrollSection}></section>
     </div>
   );
 };
